@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="img/icon/lamp16x16.png" type="image/x-icon">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Portfolio</title>
+</head>
+<body>
+    <div class="wrap">
+        <main class="main section active w-full h-screen">
+            <div class="container mx-auto px-4">
+                <div class="main_content flex justify-center">
+                    <header class="header w-2/6">
+                        <nav class="header_navigation flex justify-between">
+                            <a href="#" class="hover-elm">Home</a>
+                            <a href="#" class="hover-elm">About</a>
+                            <a href="#" class="hover-elm">Work</a>
+                            <a href="#" class="hover-elm">Contacts</a>
+                        </nav>
+                    </header>
+                    <div class="main_content_lamp w-2/5 flex justify-start">
+                        <div class="main_content_lamp_wrap">
+                            <img src="img/lampMain.svg" alt="">
+                        </div>
+                        <div class="button">
+                            <img src="img/off.svg" alt="" class="js-button">
+                        </div>
+                        <p>Nice View</p>
+                    </div>
+                    <div class="main_content_title w-2/5 h-screen flex flex-col justify-center">
+                        <div class="parallax" data-speed="20">
+                            <h1 class="mb-8">I’m Nikita Ivanov<br>Frontend Developer</h1>
+                            <p>I am also a big fan of animation on websites. I add magic to projects using CSS and JS</p>
+                        </div>
+                        <span class="bg parallax" data-speed="40"></span>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <section class="about section pt-8 pb-24">
+            <div class="container mx-auto px-4">
+                <article class="about_content">
+                    <div class="title">
+                        <p class="hover-elm">ABOUT ME</p>
+                    </div>
+                    <div class="button">
+                        <img src="img/Group.svg" alt="" class="js-button">
+                    </div>
+                    <div class="about_content_body flex mt-16">
+                        <div class="about_content_body_photo w-2/6 parallax" data-speed="30">
+                            <img src="img/photo.jpeg" alt="" data-speed="20" class="parallax">
+                        </div>
+                        <div class="about_content_body_description w-4/6 flex flex-col items-end justify-center text-right">
+                            <h2 class="mb-8">I am Nikita Ivanov, I am engaged<br>in website development</h2>
+                            <p class="w-3/5 mb-6">I'm introducing animation into my projects because I think animation adds a little bit of magic to the site</p>
+                            <p class="w-3/5">Outside of work, I study various literature related to programming, and also in my free time I really like to watch reality shows and play on the console</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section class="skill section my-12">
+           <div class="container mx-auto px-4">
+               <div class="skill_content">
+                <div class="title">
+                    <p class="hover-elm">what i can</p>
+                </div>
+                <div class="skill_content_body h-screen flex mt-8">
+                    <div class="skill_content_body_title flex flex-col justify-center items-center w-3/6 h-full mr-8">
+                        <h2 class="w-3/5 text-center hover-elm">what do I use in projects?</h2>
+                    </div>
+                    <div class="skill_content_body_description w-3/6 h-full grid grid-cols-2 grid-rows-2 gap-8">
+                        <div class="skill_content_body_description_item flex">
+                            <div class="skill_content_body_description_item_front side flex justify-center items-center h-full w-full">
+                                <h2>.html</h2>
+                            </div>
+                            <div class="skill_content_body_description_item_back side flex justify-center items-center h-full w-full">
+                                <ul>
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="skill_content_body_description_item">
+                            <div class="skill_content_body_description_item_front side flex justify-center items-center h-full w-full">
+                                <h2>.css</h2>
+                            </div>
+                            <div class="skill_content_body_description_item_back side flex justify-center items-center h-full w-full">
+                                back
+                            </div>
+                        </div>
+                        <div class="skill_content_body_description_item col-span-full">
+                            <div class="skill_content_body_description_item_front side flex justify-center items-center h-full w-full">
+                                <h2>.js</h2>
+                            </div>
+                            <div class="skill_content_body_description_item_back side flex justify-center items-center h-full w-full">
+                                back
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               </div>
+           </div>
+        </section>
+        <section class="work section py-8 mb-12">
+            <div class="container mx-auto px-4">
+                <div class="work_content">
+                    <div class="title">
+                        <p class="hover-elm">Works</p>
+                    </div>
+                    <div class="work_content_body mt-8 grid grid-cols-2 grid-rows-2 gap-8">
+                        <a href="https://nikita-gif110.github.io/platforma/" class="work_content_body_item" target="_blank">
+                            <img src="img/обложка Platforma.png" alt="">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos quaerat officiis culpa! Veritatis natus vitae nobis officia sequi neque adipisci!
+                            </p>
+                        </a>
+                        <a href="https://nikita-gif110.github.io/PmP/" class="work_content_body_item" target="_blank">
+                            <img src="img/обложка pmp.png" alt="">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos quaerat officiis culpa! Veritatis natus vitae nobis officia sequi neque adipisci!
+                            </p>
+                        </a>
+                        <a href="https://nikita-gif110.github.io/artgallery/" class="work_content_body_item row-span-full" target="_blank">
+                            <img src="img/обложка ArtGallery.png" alt="">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos quaerat officiis culpa! Veritatis natus vitae nobis officia sequi neque adipisci!
+                            </p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="footer py-8">
+            <div class="container mx-auto px-4">
+                <div class="footer_content">
+                    <div class="title">
+                        <p class="hover-elm">contacts</p>
+                    </div>
+                    <div class="footer_content_body mt-8 flex justify-between">
+                        <div class="footer_content_body_copyright w-3/5">
+                            <a href="#" target="_blanc" class="hover-elm">Created by <strong>Nikita Ivanov</strong></a>
+                        </div>
+                        <div class="footer_content_body_contacts w-1/5 flex justify-between">
+                            <a href="#" class="hover-elm"><img src="img/icon/instagram.svg" alt=""></a>
+                            <a href="#" class="hover-elm"><img src="img/icon/telegram.svg" alt=""></a>
+                            <a href="#" class="hover-elm"><img src="img/icon/telegram.svg" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <div class="custom-cursor"></div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>

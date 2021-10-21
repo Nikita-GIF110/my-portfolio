@@ -1,0 +1,470 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Special+Elite&display=swap');
+//font-family: 'Fredoka One', cursive;
+//font-family: 'Special Elite', cursive;
+
+
+html, body{
+    scroll-behavior: smooth;
+    background-color: #333C4B;
+    cursor: none;
+}
+.custom-cursor{
+    height: 50px;
+    width: 50px;
+    pointer-events: none;
+    position: fixed;
+    border-radius: 100%;
+    background-color: #fff;
+    z-index: 20;
+    transition: transform 0.3s linear;
+    opacity: 0.6;
+}
+.custom-cursor.active{
+    transform-origin: center;
+    transform: scale(2);
+    transition: transform opacity 0.3s linear;
+    opacity: 1;
+    mix-blend-mode: difference;
+}
+.setion{
+    position: relative;
+    overflow: hidden;
+}
+.button{
+    cursor: pointer;
+}
+.title{
+    text-align: center;
+    p{
+        position: relative;
+        color: #fff;
+        font-family: 'Special Elite', cursive;
+        font-size: 24px;
+        display: inline-block;
+        text-transform: lowercase;
+    }
+    p:first-letter{
+        text-transform: uppercase;
+    }
+    p::before{
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background-color: #fff;
+        transition: transform 0.2s linear;
+    }
+    p:hover::before{
+        transition: transform 0.2s linear;
+    }
+}
+.main{
+    perspective: 10000px;
+    perspective-origin: center;
+    transform-style: preserve-3d;
+    &_content{
+        position: relative;
+        .header{
+            position: absolute;
+            right: 0;
+            top: 30px;
+            z-index: 5;
+            &_navigation{
+                a{
+                    position: relative;
+                    font-family: 'Special Elite', cursive;
+                    color: #fff;
+                }
+                a::before{
+                    content: '';
+                    position: absolute;
+                    bottom: -10px;
+                    left: 0;
+                    width: 100%;
+                    height: 0;
+                    background-color: #fff;
+                    transition: all 0.2s;
+                }
+                a:hover::before{
+                    bottom: -5px;
+                    height: 3px;
+                    transition: all 0.2s;
+                }
+                a:nth-child(1)::before{
+                    transform: rotate(3deg);
+                }
+                a:nth-child(2)::before{
+                    transform: rotate(-4deg);
+                }
+                a:nth-child(3)::before{
+                    transform: rotate(2deg);
+                }
+                a:nth-child(4)::before{
+                    transform: rotate(-3deg);
+                }
+            }
+        }
+        &_lamp{
+            position: relative;
+            &_wrap{
+                transform-origin: top;
+                animation: animLamp 10s linear infinite;
+                position: relative;
+                filter: blur(1.5px);
+                img{
+                    margin-top: -50px;
+                    max-width: 100%;
+                    height: auto;
+                }
+            }
+            .button{
+                position: absolute;
+                right: 45%;
+                top: -40%;
+                transition: top 0.2s linear;
+            }
+            p{
+                visibility: hidden;
+                position: absolute;
+                bottom: 40%;
+                left: 15%;
+                transform: translateX(-50%);
+                color: #fff;
+                font-size: 24px;
+                font-family: 'Special Elite', cursive;
+                animation: shadowAnim 10s linear infinite;
+            }
+            @keyframes shadowAnim {
+                0%{
+                    text-shadow: -15px 9px 4px rgba(0, 0, 0, 0.3); 
+                }
+                25%{
+                    text-shadow: 0 12px 4px rgba(0, 0, 0, 0.3);
+                }
+                50%{
+                    text-shadow: 15px 9px 4px rgba(0, 0, 0, 0.3);
+                }
+                75%{
+                    text-shadow: 0px 12px 4px rgba(0, 0, 0, 0.3);
+                }
+                100%{
+                    text-shadow: -15px 9px 4px rgba(0, 0, 0, 0.3);
+                }
+            }
+        }
+        &_title{
+            position: relative;
+            font-family: 'Fredoka One', cursive;
+            color: #fff;
+            text-align: right;
+            z-index: 2;
+            .parallax{
+                transition: all 1s;
+                h1{
+                    font-size: 48px;
+                    line-height: 50px;
+                }
+                p{
+                    font-size: 18px;
+                    line-height: 35px;
+                }
+            }
+            .bg{
+                position: absolute;
+                top: 30%;
+                right: -5%;
+                width: 320px;
+                height: 300px;
+                background-color: #D4A056;
+                opacity: 0.4;
+                z-index: -1;
+                mix-blend-mode: color;
+                border-radius: 10px;
+                transition: all 1s;
+            }
+        }
+    }
+}
+.main.active{
+    .button{
+        top: -30%;
+        transition: top 0.3s linear;
+    }
+    .main_content_lamp{
+        .main_content_lamp_wrap::before{
+            content: '';
+            position: absolute;
+            bottom: 27.5%;
+            left: -90.5%;
+            width: 380px;
+            height: 440px;
+            background: url('../img/lightMain.svg') center no-repeat;
+        }
+        @keyframes animLamp {
+            0%{
+                transform: rotate(3deg);
+            }
+            50%{
+                transform: rotate(-3deg);
+            }
+            100%{
+                transform: rotate(3deg);
+            }
+        }
+        p{
+            visibility: visible;
+        }
+    }
+}
+
+.about{
+    background-color: #4A4C5C;
+    border-top-right-radius: 300px;
+    position: relative;
+    overflow: hidden;
+    &_content{
+        position: relative;
+        .title{
+            p::before{
+                transform: rotate(2deg);
+            }
+            p:hover::before{
+                transform: rotate(-3deg);
+            }
+        }
+        .button{
+            position: absolute;
+            top: 50%;
+            left: 45%;
+            width: 100px;
+            height: 120px;
+            overflow: hidden;
+            z-index: 9;
+            img{
+                position: absolute;
+                top: 0;
+                left: 0;
+                max-width: 100%;
+                height: auto;
+                object-position: 0 -121px;
+            }
+        }
+        &_body{
+            &_photo{
+                border: 10px solid #D4A056;
+                border-radius: 10px;
+                height: 520px;
+                transition: all 0.3s linear;
+                img{
+                    position: relative; 
+                    top: 30px;
+                    left: 30px;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    // transform: translate(30px, 30px);
+                    border-radius: inherit;
+                    transition: transform 0.3s linear;
+                }
+            }
+            &_description{
+                font-family: 'Fredoka One', cursive;
+                color: #fff;
+                h2{
+                    font-size: 40px;
+                    line-height: 60px;
+                }
+                p{
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
+.about.active{
+    .button{
+        img{
+            object-position: 0 0;
+        }
+    }
+    .about_content{
+        .about_content_body{
+            .about_content_body_photo{
+                transition: all 0.3s linear;
+                box-shadow: 0 0 40px #D4A056,
+                            inset 0 0 40px #D4A056
+            }
+        }
+    }
+
+}
+
+.skill{
+    &_content{
+        &_body{
+            position: relative;
+            border-radius: 10px;
+            color: #fff;
+            &_title{
+                background-color: #4A4C5C;
+                h2{
+                    font-family: 'Special Elite', cursive;
+                    font-size: 34px;
+                    text-transform: uppercase;
+                }
+            }
+            &_description{
+                background-color: #333C4B;
+                font-family: 'Fredoka One', cursive;
+                &_item{
+                    position: relative;
+                    box-sizing: border-box;
+                    perspective: 1000px;
+                    transform-style: preserve-3d;
+                    .side{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        backface-visibility: hidden;
+                        border-radius: 10px;
+                    }
+                    &_front{
+                        background-color: red;
+                        transform: rotateY(0);
+                        transition: transform 1s linear;
+                        h2{
+                            text-transform: uppercase;
+                        }
+                    }
+                    &_back{
+                        background-color: blue;
+                        transform: rotateY(180deg);
+                        transition: transform 1s linear;
+                        backface-visibility: hidden;
+                    }
+                }
+                &_item:hover{
+                    .skill_content_body_description_item_front{
+                        transform: rotateY(-180deg);
+                        transition: transform 1s linear;
+                    }
+                    .skill_content_body_description_item_back{
+                        transform: rotateY(0deg);
+                        transition: transform 1s linear;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.work{
+    &_content{
+        .title{
+            p::before{
+                transform: rotate(-1deg);
+            }
+            p:hover::before{
+                transform: rotate(2deg);
+            }
+        }
+        &_body{
+            perspective: 1000px;
+            transform-style: preserve-3d;
+            &_item{
+                position: relative;
+                border-radius: 10px;
+                overflow: hidden;
+                transition: transform 0.3s;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                    transform: scale(1);
+                    transition: transform 0.3s linear;
+                }
+                p{
+                    position: absolute;
+                    visibility: hidden;
+                    opacity: 0;
+                    bottom: 5%;
+                    left: 5%;
+                    transition: all 0.2s linear;
+                    color: #fff;
+                    font-family: 'Fredoka One', cursive;
+                    max-width: 70%;
+                    z-index: 2;
+                    pointer-events: none;
+                    transform: perspective(1000px);
+                }
+            }
+            &_item:hover::before{
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(0deg, rgba(51, 60, 75, 0.5) 32.92%, rgba(51, 60, 75, 0) 96.39%);
+                z-index: 1;
+                pointer-events: none;
+            }
+            &_item:hover{
+                img{
+                    transform: scale(1.1);
+                    transition: transform 3s linear;
+                }
+                p{
+                    visibility: visible;
+                    opacity: 1;
+                    transform: translateY(0);
+                    transition: all 0.3s linear 0.2s;
+                }
+            }
+        }
+    }
+}
+
+.footer{
+    background: #4A4C5C;
+    border-radius: 300px 300px 0px 0px;
+    &_content{
+        .title{
+            p::before{
+                transform: rotate(-3deg);
+            }
+            p:hover::before{
+                transform: rotate(2deg);
+            }
+        }
+        &_body{
+            &_copyright{
+                a{
+                    font-family: 'Fredoka One', cursive;
+                    color: #fff;
+                }
+            }
+            &_contacts{
+                a{
+                    display: inline-flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 50%;
+                    width: 40px;
+                    height: 40px;
+                    background-color: #fff;
+                    img{
+                        max-width: 100%;
+                        height: auto;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    }
+}
+//font-family: 'Fredoka One', cursive;
+//font-family: 'Special Elite', cursive;
