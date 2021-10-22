@@ -6,23 +6,23 @@
 html, body{
     scroll-behavior: smooth;
     background-color: #333C4B;
-    cursor: none;
 }
 .custom-cursor{
-    height: 50px;
-    width: 50px;
+    height: 30px;
+    width: 30px;
     pointer-events: none;
     position: fixed;
     border-radius: 100%;
-    background-color: #fff;
+    border: 1px solid #fff;
     z-index: 20;
-    transition: transform 0.3s linear;
+    transition: 0.2s ease-out;
     opacity: 0.6;
 }
 .custom-cursor.active{
+    background-color: #fff;
     transform-origin: center;
     transform: scale(2);
-    transition: transform opacity 0.3s linear;
+    transition: transform opacity 0.3s;
     opacity: 1;
     mix-blend-mode: difference;
 }
@@ -323,6 +323,7 @@ html, body{
                     box-sizing: border-box;
                     perspective: 1000px;
                     transform-style: preserve-3d;
+                    border: 1px solid #fff;
                     .side{
                         position: absolute;
                         top: 0;

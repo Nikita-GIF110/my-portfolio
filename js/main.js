@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function(){
 })
 
 
-
+console.log(null == undefined);
 
 
 

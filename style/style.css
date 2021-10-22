@@ -2,33 +2,31 @@
 html, body {
   scroll-behavior: smooth;
   background-color: #333C4B;
-  cursor: none;
 }
 
 .custom-cursor {
-  height: 50px;
-  width: 50px;
+  height: 30px;
+  width: 30px;
   pointer-events: none;
   position: fixed;
   border-radius: 100%;
-  background-color: #fff;
+  border: 1px solid #fff;
   z-index: 20;
-  -webkit-transition: -webkit-transform 0.3s linear;
-  transition: -webkit-transform 0.3s linear;
-  transition: transform 0.3s linear;
-  transition: transform 0.3s linear, -webkit-transform 0.3s linear;
+  -webkit-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
   opacity: 0.6;
 }
 
 .custom-cursor.active {
+  background-color: #fff;
   -webkit-transform-origin: center;
           transform-origin: center;
   -webkit-transform: scale(2);
           transform: scale(2);
-  -webkit-transition: -webkit-transform opacity 0.3s linear;
-  transition: -webkit-transform opacity 0.3s linear;
-  transition: transform opacity 0.3s linear;
-  transition: transform opacity 0.3s linear, -webkit-transform opacity 0.3s linear;
+  -webkit-transition: -webkit-transform opacity 0.3s;
+  transition: -webkit-transform opacity 0.3s;
+  transition: transform opacity 0.3s;
+  transition: transform opacity 0.3s, -webkit-transform opacity 0.3s;
   opacity: 1;
   mix-blend-mode: difference;
 }
@@ -430,6 +428,7 @@ html, body {
           perspective: 1000px;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
+  border: 1px solid #fff;
 }
 
 .skill_content_body_description_item .side {
